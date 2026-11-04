@@ -27,9 +27,9 @@
 <meta name="description" content="200 recetas caseras para tu perro, listas en 15 minutos, sin sal ni condimentos y con la porción exacta según su peso.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="image" href="img/hero-420.webp" imagesrcset="img/hero-420.webp 420w, img/hero-560.webp 560w" imagesizes="(max-width:899px) 260px, 460px" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
     --body:#fbf7f0;
@@ -295,6 +295,29 @@
   @media(max-width:420px){.cta{font-size:15px;padding:14px 12px;gap:8px;letter-spacing:-.01em}.cta::after{width:24px;height:24px;flex-basis:24px;font-size:14px}.offer .seals{font-size:12px;gap:10px}.offer .in{padding:20px 16px}
     .cost{font-size:13px}.cost td:first-child{width:27%}.pricecell{font-size:14px}.items{font-size:14px}}
   @media(max-width:420px){.urgency{font-size:11.5px;letter-spacing:.02em}.hero .pill{font-size:12px;padding:5px 11px}}
+
+  /* ===== v2: primera dobra ===== */
+  .hero .pill{font-size:12.5px}
+  .hero h1{margin-top:12px}
+  .offer-line{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;font-weight:800;color:var(--muted);font-size:15px}
+  .offer-line s{color:var(--bad);text-decoration-thickness:2px}
+  .off-tag{background:var(--urgency);color:#fff;font-weight:900;font-size:12.5px;letter-spacing:.04em;border-radius:6px;padding:3px 8px;transform:rotate(-3deg);box-shadow:0 3px 8px rgba(217,45,32,.3)}
+  .cta-hero{padding:12px 18px}
+  .cta-hero .cta-stack{display:flex;flex-direction:column;align-items:center;line-height:1.1}
+  .cta-hero .cta-price{font-size:24px;font-weight:900;background:none;padding:0;margin:0;letter-spacing:-.01em}
+  .cta-hero .cta-sub{font-size:13.5px;font-weight:800;opacity:.85;margin-top:3px}
+  .micro{font-size:12.5px;font-weight:700;color:var(--muted);text-align:center;margin-top:9px}
+  .hero-cta{display:flex;flex-direction:column;align-items:center}
+  .hero-cta .cta{width:100%;max-width:480px}
+  @media(min-width:900px){.hero-cta{align-items:flex-start;margin-top:22px}.offer-line{justify-content:flex-start}.micro{text-align:left}}
+  @media(max-width:899px){
+    .hero{padding-top:10px;padding-bottom:28px}
+    .hero-grid{gap:12px}
+    .hero .lead{font-size:15px;margin-top:6px}
+    .hero-img img.swapped{height:min(255px,31vh)!important;width:auto;max-width:100%}
+  }
+  @media(max-width:380px){.hero h1{font-size:22px}.cta-hero .cta-price{font-size:22px}}
+
 </style>
 </head>
 <body>
@@ -332,23 +355,16 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <!-- Usa "Revisadas por veterinario" SOLO si tienes un veterinario real que las revisó. -->
       <span class="pill">✓ Sin sal · Sin condimentos · Porción por peso</span>
-      <div class="chips">
-        <span class="chip">🛡️ Defensas</span>
-        <span class="chip">💚 Digestión</span>
-        <span class="chip">🐾 De cachorro a abuelito</span>
-      </div>
-      <h1 style="margin-top:14px">Cambia la comida seca de bolsa por <mark>comida de verdad</mark>, y mira cómo vuelve a esperar su plato</h1>
-      <p class="lead">200 recetas caseras listas en 15 minutos, con ingredientes que ya tienes en tu cocina, paso a paso y con la <b>porción exacta según su peso</b>.</p>
+      <h1>Cambia <span data-t="las_croquetas">las croquetas</span> por <mark>comida de verdad</mark> y mira cómo vuelve a esperar su plato</h1>
+      <p class="lead">200 recetas caseras en <b>15 minutos</b>, con lo que ya tienes en tu cocina y la <b>porción exacta según su peso</b>.</p>
     </div>
-    <div class="hero-img"><img class="swapped" src="img/hero.webp" width="540" height="764" alt="" fetchpriority="high"></div>
+    <div class="hero-img"><img class="swapped" src="img/hero-420.webp" srcset="img/hero-420.webp 420w, img/hero-560.webp 560w" sizes="(max-width:899px) 260px, 460px" width="420" height="625" alt="Mujer cocinando comida casera para su perro" fetchpriority="high"></div>
     <div class="hero-cta">
-      <div class="cta-row">
-        <a class="cta cta-fx js-checkout" href="#oferta">Quiero el kit por <span class="js-price">US$7.90</span></a>
-        <div class="seals"><span>🔒 Compra 100% segura</span><span>⚡ Acceso inmediato</span><span>🛡️ Garantía de 15 días</span></div>
-      </div>
-      <div class="pups"><span class="stack"><img width="72" height="72" loading="lazy" src="img/perrito-1.webp" alt=""><img width="72" height="71" src="img/perrito-2.webp" alt=""><img width="72" height="74" src="img/perrito-3.webp" alt=""><img width="72" height="72" loading="lazy" src="img/perrito-4.webp" alt=""></span><span>Para perritos de 3 a 45 kg, de cachorro a abuelito</span></div>
+      <div class="offer-line"><span class="off-tag"><span class="js-off">-80%</span> HOY</span><span class="from">De <s class="js-total">US$39</s> por solo</span></div>
+      <a class="cta cta-fx cta-hero js-checkout" href="#oferta"><span class="cta-stack"><span class="cta-price js-price">US$7.90</span><span class="cta-sub">Quiero mis 200 recetas + 5 regalos</span></span></a>
+      <p class="micro">🔒 Pago seguro · ⚡ Acceso inmediato · 🛡️ Garantía 15 días</p>
+      <div class="pups"><span class="stack"><img width="72" height="72" src="img/perrito-1.webp" alt=""><img width="72" height="71" src="img/perrito-2.webp" alt=""><img width="72" height="74" src="img/perrito-3.webp" alt=""><img width="72" height="72" src="img/perrito-4.webp" alt=""></span><span>Para perritos de 3 a 45 kg, de cachorro a abuelito</span></div>
     </div>
   </div>
 </section>
@@ -548,6 +564,7 @@
 </footer>
 
 
+
 <script>
 /* =====================================================================
    CONFIGURACIÓN
@@ -687,6 +704,8 @@ function apply(cc){
   $$(".js-price").forEach(e => e.textContent = fmtAny(price, f));
   Object.keys(vals).forEach(k => $$(".js-" + k).forEach(e => e.textContent = fmtAny(vals[k], f)));
   $$(".js-total").forEach(e => e.textContent = fmtAny(total, f));
+  $$(".js-off").forEach(e => e.textContent = "-" + Math.round((1 - price / total) * 100) + "%");
+
   const pl = (f.pay || CONFIG.usdFormat.pay).slice();
   if (CONFIG.efectivo && f.cash) pl.push(f.cash);
   const payTxt = pl.length > 1 ? pl.slice(0, -1).join(", ") + " o " + pl.at(-1) : pl[0];
@@ -761,8 +780,8 @@ $$(".ph[data-img]").forEach(ph => {
   im.src = ph.dataset.img;
 });
 
-// Precarga la imagen del kit apenas termina de cargar lo principal
-window.addEventListener("load", () => { const i = new Image(); i.src = "img/kit-completo.webp"; });
+// Precarga el kit 3 s después de cargar (no compite con la primera dobra)
+window.addEventListener("load", () => setTimeout(() => { const i = new Image(); i.src = "img/kit-completo.webp"; }, 3000));
 
 // Animación de entrada
 (function(){

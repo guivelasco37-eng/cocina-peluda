@@ -50,7 +50,7 @@
   .vsl .play::after{content:"";margin-left:7px;border-style:solid;border-width:18px 0 18px 30px;border-color:transparent transparent transparent #fff}
 
   /* bloque con retraso */
-  .esconder{display:none!important}
+  .esconder{visibility:hidden;height:0;overflow:hidden;margin:0!important;animation:none!important}
   .bloque-boton{margin-top:22px;animation:aparece .5s ease}
   @keyframes aparece{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
@@ -108,17 +108,19 @@
   </div>
 
   <div class="compra">
-    <div id="hotmart-downsell-2">
-      <!-- COLE AQUI O SCRIPT DO BOTÃO DA HOTMART -->
-      <!-- (o botão abaixo é só um exemplo visual: apague-o quando colar o script) -->
-      <a class="btn" href="#">SÍ, QUIERO LA GUÍA DE EMERGENCIA – US$4.90</a>
+    <div id="hotmart-downsell-2" class="widget-hotmart">
+      <!-- HOTMART - Sales Funnel Widget -->
+      <!--- sales funnel container --->
+      <div id="hotmart-sales-funnel"></div>
+      <!--- script load and setup --->
+      <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+      <script>
+      checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+      </script>
+      <!-- HOTMART - Sales Funnel Widget -->
     </div>
     <p class="seguro">🔒 Garantía de 7 días: si no te sirve, te devolvemos tu dinero.</p>
-    <div id="hotmart-recusa-downsell-2" class="recusa">
-      <!-- COLE AQUI O SCRIPT DO BOTÃO DA HOTMART -->
-      <!-- (o link abaixo é só um exemplo visual: apague-o quando colar o script) -->
-      <a href="#">No, gracias. Prefiero arriesgarme.</a>
-    </div>
+    
   </div>
   <div class="fin"></div>
 </main>

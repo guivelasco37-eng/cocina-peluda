@@ -50,7 +50,7 @@
   .vsl .play::after{content:"";margin-left:7px;border-style:solid;border-width:18px 0 18px 30px;border-color:transparent transparent transparent #fff}
 
   /* bloque con retraso */
-  .esconder{display:none!important}
+  .esconder{visibility:hidden;height:0;overflow:hidden;margin:0!important;animation:none!important}
   .bloque-boton{margin-top:22px;animation:aparece .5s ease}
   @keyframes aparece{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
@@ -81,24 +81,26 @@
 
   <!-- Este bloco aparece depois de ATRASO_SEGUNDOS (veja o script no final da página). -->
   <div class="bloque-boton esconder">
-    <div id="hotmart-upsell-2">
-      <!-- COLE AQUI O SCRIPT DO BOTÃO DA HOTMART -->
-      <!-- (o botão abaixo é só um exemplo visual: apague-o quando colar o script) -->
-      <a class="btn" href="#">SÍ, QUIERO ESTAR PREPARADO – US$9.90</a>
+    <div id="hotmart-upsell-2" class="widget-hotmart">
+      <!-- HOTMART - Sales Funnel Widget -->
+      <!--- sales funnel container --->
+      <div id="hotmart-sales-funnel"></div>
+      <!--- script load and setup --->
+      <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+      <script>
+      checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+      </script>
+      <!-- HOTMART - Sales Funnel Widget -->
     </div>
     <p class="seguro">🔒 Pago único · Garantía de 7 días</p>
-    <div id="hotmart-recusa-upsell-2" class="recusa">
-      <!-- COLE AQUI O SCRIPT DO BOTÃO DA HOTMART -->
-      <!-- (o link abaixo é só um exemplo visual: apague-o quando colar o script) -->
-      <a href="#">No, gracias. Prefiero no pensar en eso.</a>
-    </div>
+    
   </div>
   <div class="fin"></div>
 </main>
 <script>
   // Tempo (em segundos) até o botão aparecer.
   // se usar o atraso do próprio player, apague este timer
-  var ATRASO_SEGUNDOS = 90;
+  var ATRASO_SEGUNDOS = 30;
   setTimeout(function(){
     var b = document.querySelectorAll('.esconder');
     for (var i = 0; i < b.length; i++) b[i].classList.remove('esconder');

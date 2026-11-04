@@ -1,0 +1,4 @@
+Fotos de las razas: guarda aquí una foto cuadrada por raza, con el mismo nombre del "id" de razas.js y extensión .jpg.
+Ejemplos: chihuahua.jpg, shih-tzu.jpg, poodle.jpg, yorkshire.jpg, schnauzer.jpg
+Mestizos: mestizo-pequeno-tranquilo.jpg, mestizo-pequeno-activo.jpg, mestizo-mediano-tranquilo.jpg, ...
+Si falta la foto, la app muestra un círculo naranja con la inicial. Tamaño recomendado: 600x600 px.
